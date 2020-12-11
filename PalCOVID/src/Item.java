@@ -2,7 +2,7 @@
 public class Item {
 	public String kindItem;
 	public String nameOfItem;
-	private int count;
+	protected int count;
 	public float price;
 	
 	public Item(String _1, String _2, int x, float y) {
