@@ -11,10 +11,13 @@ public class Order {
 	public float totalPrice;
 	public int phoneNumber;
 	
+	public Order() {
+		
+	}
 	void showItems() {
 		
 	}
-	void removeItem() {
+	void removeItem(Item a) {
 		
 	}
 	void setTotalPrice() {

@@ -11,29 +11,25 @@ public class Item {
 		count =x;
 		price = y;
 	}
-	int getCount() {
+	public int getCount() {
 		return count;
 	}
-	String getName() {
+	public String getName() {
 		return nameOfItem;
 	}
-	String getKind() {
+	public String getKind() {
 		return kindItem;
 	}
-	float getPrice() {
+	public float getPrice() {
 		return price;
 	}
-	
-	void setCount(int x) {
+	public void setCount(int x) {
 		count = x;
 	}
-	void setName(String na) {
+	public void setName(String na) {
 		nameOfItem = na;
 	}
-	void setPrice(float x) {
+	public void setPrice(float x) {
 		price = x;
 	}
-	
-	
-	
 }

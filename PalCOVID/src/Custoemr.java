@@ -38,6 +38,9 @@ public class Custoemr {
 		return phoneNumber;
 	}
 	
+	public Order getCurrentOrder() {
+		return currentOrder;
+	}
 	
 	public void setName(String n) {
 		name = n;
@@ -66,6 +69,7 @@ public class Custoemr {
 		if(currentOrder == null) {
 			currentOrder = new Order();
 		}
+		currentOrder.items.add(a);
 		/// pass
 	}
 	
