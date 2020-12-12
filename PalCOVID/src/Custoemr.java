@@ -74,7 +74,11 @@ public class Custoemr {
 	}
 	
 	public void removeItem(Item a) {
-		
+		for(int i=0 ; i < currentOrder.items.size(); i++) {
+			if(a.equals(currentOrder.items.get(i))) {
+				currentOrder.items.remove(i);
+			}
+		}
 	}
 	
 	public void showDetails() {
