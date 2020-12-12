@@ -2,7 +2,7 @@ import java.util.*;
 import java.time.*;
 
 public class Order {
-	public ArrayList <Item> items ;
+	public ArrayList <SaledItem> items ;
 	public String storeName;
 	public String addressDeliver;
 	public String timePlaced;

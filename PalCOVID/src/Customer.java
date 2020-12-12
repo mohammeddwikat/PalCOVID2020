@@ -65,7 +65,7 @@ public class Customer {
 		paymentMethod = a;
 	}
 	
-	public void buyItem(Item a) {
+	public void buyItem(SaledItem a) {
 		if(currentOrder == null) {
 			currentOrder = new Order();
 		}
