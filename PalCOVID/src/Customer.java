@@ -49,6 +49,7 @@ public class Customer {
 	public void setEmail(String e) {
 		email = e;
 	}
+	
 	public void setPass(String p) {
 		password = p;
 	}
@@ -73,7 +74,7 @@ public class Customer {
 		/// pass
 	}
 	
-	public void removeItem(Item a) {
+	public void removeItem(SaledItem a) {
 		for(int i=0 ; i < currentOrder.items.size(); i++) {
 			if(a.equals(currentOrder.items.get(i))) {
 				currentOrder.items.remove(i);
@@ -87,10 +88,22 @@ public class Customer {
 		System.out.println(phoneNumber);
 		System.out.println(address);
 		System.out.println(paymentMethod);
-		
 	}
 	
-	
+	public void currentOrderDetails() {
+		if(!currentOrder.equals(null)) {
+			System.out.println(currentOrder.storeName);
+			System.out.println(currentOrder.phoneNumber);
+			System.out.println(currentOrder.timePlaced);
+			System.out.println(currentOrder.totalPrice);
+			System.out.println(currentOrder.pointGained);
+			System.out.println(currentOrder.addressDeliver);
+			System.out.println(currentOrder.PaymentInformation);
+		}else {
+			System.out.println("No orders");
+		}
+
+	}
 	
 	
 	
