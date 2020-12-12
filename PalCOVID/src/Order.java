@@ -14,22 +14,32 @@ public class Order {
 	public Order() {
 		
 	}
-	void showItems() {
+	public void showDetails() {
+		System.out.println(storeName);
+		System.out.println(phoneNumber);
+		System.out.println(addressDeliver);
+		System.out.println(timePlaced);
+		System.out.println(PaymentInformation);
+		System.out.println(pointGained);
+		System.out.println(totalPrice);
+	}
+	public void showItems() {
 		for(int i=0 ; i < items.size(); i++) {
-			System.out.print(items.get(i).nameOfItem);
-			System.out.print(" ");
-			System.out.print(items.get(i).kindItem);
-			System.out.print(" ");
-			System.out.print(items.get(i).price);
+			items.get(i).showDetails();
 		}
-		System.out.println();
-		System.out.println();
 	}
-	void removeItem(Item a) {
-		
+	void removeItem(SaledItem a) {
+		for(int i=0 ; i < items.size(); i++) {
+			if(items.get(i).equals(a)) {
+				items.remove(i);
+				setTotalPrice(totalPrice - (a.countSaled*a.price));
+				break;
+			}
+		}
 	}
-	void setTotalPrice() {
+	void setTotalPrice(float x) {
 		// call it when remove an item
+		totalPrice = x;
 	}
 	
 }

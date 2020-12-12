@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class Customer {
 	String name;
@@ -5,9 +6,8 @@ public class Customer {
 	int phoneNumber;
 	String password;
 	String address;
-	String paymentMethod;
-	
-	Order currentOrder;
+	String paymentMethod;	
+	ArrayList <Order> currentOrders;
 	
 	public Customer(String _1, String _2, int pn, String _3, String _4, String _5){
 		name = _1;
@@ -38,8 +38,8 @@ public class Customer {
 		return phoneNumber;
 	}
 	
-	public Order getCurrentOrder() {
-		return currentOrder;
+	public ArrayList <Order> getCurrentOrder() {
+		return currentOrders;
 	}
 	
 	public void setName(String n) {
@@ -67,17 +67,33 @@ public class Customer {
 	}
 	
 	public void buyItem(SaledItem a) {
-		if(currentOrder == null) {
-			currentOrder = new Order();
+		if(currentOrders.size() == 0) {
+			Order order = new Order();
+			order.items.add(a);
+			currentOrders.add(order);
 		}
-		currentOrder.items.add(a);
-		/// pass
+		for(int i=0; i<currentOrders.size(); i++) {
+			if(currentOrders.get(i).storeName.equals(a.store.name)) {
+				currentOrders.get(i).items.add(a);
+				return;
+			}
+		}
+		Order order = new Order();
+		order.items.add(a);
+		currentOrders.add(order);
+		
 	}
 	
-	public void removeItem(SaledItem a) {
-		for(int i=0 ; i < currentOrder.items.size(); i++) {
-			if(a.equals(currentOrder.items.get(i))) {
-				currentOrder.items.remove(i);
+	public void removeItem(SaledItem a, Order r) {
+		for(int i=0 ; i < currentOrders.size(); i++) {
+			if(r.equals(currentOrders.get(i))) {
+				for(int j=0; j< currentOrders.get(i).items.size(); j++) {
+					if(currentOrders.get(i).items.get(j).equals(a)) {
+						currentOrders.get(i).items.remove(j);
+						return;
+					}
+				}
+				
 			}
 		}
 	}
@@ -90,21 +106,14 @@ public class Customer {
 		System.out.println(paymentMethod);
 	}
 	
-	public void currentOrderDetails() {
-		if(!currentOrder.equals(null)) {
-			System.out.println(currentOrder.storeName);
-			System.out.println(currentOrder.phoneNumber);
-			System.out.println(currentOrder.timePlaced);
-			System.out.println(currentOrder.totalPrice);
-			System.out.println(currentOrder.pointGained);
-			System.out.println(currentOrder.addressDeliver);
-			System.out.println(currentOrder.PaymentInformation);
-		}else {
-			System.out.println("No orders");
-		}
-
+	public void currentOrdersDetails() {
+		int n = currentOrders.size();
+		if(n == 0)
+			System.out.println("No Orders");
+		else
+			for(int i=0 ; i<n;i++) {
+				currentOrders.get(i).showDetails();
+				currentOrders.get(i).showItems();
+			}
 	}
-	
-	
-	
 }

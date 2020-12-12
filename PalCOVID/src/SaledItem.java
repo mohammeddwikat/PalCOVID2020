@@ -2,8 +2,8 @@
 public class SaledItem extends Item{
 	int countSaled;
 	Customer customer;
-	
-	public SaledItem(String _1, String _2, int x, float y, int c, Customer cs) {
+	Store store;
+	public SaledItem(String _1, String _2, int x, float y, int c, Customer cs, Store s) {
 		super(_1, _2, x, y);
 		if(c > x) {
 			countSaled = x;
@@ -11,6 +11,7 @@ public class SaledItem extends Item{
 			countSaled = c;
 		
 		customer = cs;
+		store = s;
 	}
 	
 	public Customer getCustomer() {
@@ -25,5 +26,18 @@ public class SaledItem extends Item{
 		countSaled = x;
 	}
 	
+	public void showDetails() {
+		System.out.print(nameOfItem);
+		System.out.print(" ");
+		System.out.print(kindItem);
+		System.out.print(" ");
+		System.out.print(price);
+		System.out.print(" ");
+		System.out.print(countSaled);
+		System.out.print(" ");
+		System.out.print(store.name);
+		System.out.print(" ");
+		System.out.println(store.email);
+	}
 	
 }
