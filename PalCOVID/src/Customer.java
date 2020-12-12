@@ -1,5 +1,5 @@
 
-public class Custoemr {
+public class Customer {
 	String name;
 	String email;
 	int phoneNumber;
@@ -9,7 +9,7 @@ public class Custoemr {
 	
 	Order currentOrder;
 	
-	public Custoemr(String _1, String _2, int pn, String _3, String _4, String _5){
+	public Customer(String _1, String _2, int pn, String _3, String _4, String _5){
 		name = _1;
 		email = _2;
 		phoneNumber = pn;
@@ -82,8 +82,16 @@ public class Custoemr {
 	}
 	
 	public void showDetails() {
+		System.out.println(name);
+		System.out.println(email);
+		System.out.println(phoneNumber);
+		System.out.println(address);
+		System.out.println(paymentMethod);
 		
 	}
+	
+	
+	
 	
 	
 }

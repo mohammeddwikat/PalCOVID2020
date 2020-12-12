@@ -15,7 +15,15 @@ public class Order {
 		
 	}
 	void showItems() {
-		
+		for(int i=0 ; i < items.size(); i++) {
+			System.out.print(items.get(i).nameOfItem);
+			System.out.print(" ");
+			System.out.print(items.get(i).kindItem);
+			System.out.print(" ");
+			System.out.print(items.get(i).price);
+		}
+		System.out.println();
+		System.out.println();
 	}
 	void removeItem(Item a) {
 		
