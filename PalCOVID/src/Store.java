@@ -59,8 +59,14 @@ public class Store {
 			}
 		}
 	}
+	public void addDelivery(DeliveryCompany dc) {
+		delivareyCompanies.add(dc);
+	}
 	public void showOrders() {
-		
+		for(int i=0; i < orders.size(); i++) {
+			orders.get(i).showDetails();
+			orders.get(i).showItems();
+		}
 	}
 	//add + remove delivery company
 	public void createDeliveryRecord() {
