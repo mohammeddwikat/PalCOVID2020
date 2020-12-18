@@ -5,6 +5,7 @@ public class DeliveryRecord {
 	private String timeOrderDeliverd;
 	private DeliveryCompany deCo;
 	private Customer customer;
+	private Order order;
 	
 	public DeliveryRecord(String _1, int x, String _2, DeliveryCompany dc, Customer cus) {
 		driverName = _1;
