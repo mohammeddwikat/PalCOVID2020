@@ -1,13 +1,17 @@
 
 public class DeliveryRecord {
-	public String driverName;
-	public int phoneNumber;
-	public String timeOrderDeliverd;
+	private String driverName;
+	private int phoneNumber;
+	private String timeOrderDeliverd;
+	private DeliveryCompany deCo;
+	private Customer customer;
 	
-	public DeliveryRecord(String _1, int x, String _2) {
+	public DeliveryRecord(String _1, int x, String _2, DeliveryCompany dc, Customer cus) {
 		driverName = _1;
 		phoneNumber = x;
 		timeOrderDeliverd = _2;
+		deCo = dc;
+		customer = cus;
 	}
 	
 	public void setDriverName(String a) {

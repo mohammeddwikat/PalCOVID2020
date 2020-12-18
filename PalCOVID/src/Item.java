@@ -1,9 +1,9 @@
 
 public class Item {
-	public String kindItem;
-	public String nameOfItem;
+	protected String kindItem;
+	protected String nameOfItem;
 	protected int count;
-	public float price;
+	protected float price;
 	
 	public Item(String _1, String _2, int x, float y) {
 		kindItem = _1;

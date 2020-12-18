@@ -1,7 +1,7 @@
 
 public class DrinkItem extends Item {
-	public String type ;
-	public int size;
+	private String type ;
+	private int size;
 	
 	public DrinkItem(String _1, String _2, int x, float y) {
 		super(_1, _2, x, y);
@@ -12,12 +12,17 @@ public class DrinkItem extends Item {
 		price = y;
 		
 	}
-	
-	String getType() {
+	public void setType(String t) {
+		type = t;
+	}
+	public void setSize(int s) {
+		size = s;
+	}
+	public String getType() {
 		return type;
 	}
 	
-	int getSize() {
+	public int getSize() {
 		return size;
 	}
 	

@@ -1,13 +1,13 @@
 import java.util.*;
 
 public class Customer {
-	String name;
-	String email;
-	int phoneNumber;
-	String password;
-	String address;
-	String paymentMethod;	
-	ArrayList <Order> currentOrders;
+	private String name;
+	private String email;
+	private int phoneNumber;
+	private String password;
+	private String address;
+	private String paymentMethod;	
+	private ArrayList <Order> currentOrders;
 	
 	public Customer(String _1, String _2, int pn, String _3, String _4, String _5){
 		name = _1;

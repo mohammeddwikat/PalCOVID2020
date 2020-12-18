@@ -3,6 +3,7 @@ public class SaledItem extends Item{
 	int countSaled;
 	Customer customer;
 	Store store;
+	
 	public SaledItem(String _1, String _2, int x, float y, int c, Customer cs, Store s) {
 		super(_1, _2, x, y);
 		if(c > x) {

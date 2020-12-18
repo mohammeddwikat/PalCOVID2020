@@ -1,7 +1,7 @@
 
 public class DeliveryCompany {
-	public String name;
-	public int phoneNumber;
+	private String name;
+	private int phoneNumber;
 	
 	public DeliveryCompany(String _1, int x) {
 		name = _1;
