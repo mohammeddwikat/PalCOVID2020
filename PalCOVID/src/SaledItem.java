@@ -15,6 +15,9 @@ public class SaledItem extends Item{
 		store = s;
 	}
 	
+	public void setCustomer(Customer s) {
+		customer = s;
+	}
 	public Customer getCustomer() {
 		return customer;
 	}
@@ -25,6 +28,12 @@ public class SaledItem extends Item{
 	
 	public void setCountSaled(int x) {
 		countSaled = x;
+	}
+	public void setStore(Store s) {
+		store = s;
+	}
+	public Store getStore() {
+		return store;
 	}
 	
 	public void showDetails() {
