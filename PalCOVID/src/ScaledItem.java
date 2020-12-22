@@ -1,10 +1,10 @@
 
-public class SaledItem extends DrinkItem{
+public class ScaledItem extends DrinkItem{
 	int countSaled;
 	Customer customer;
 	Store store;
 	
-	public SaledItem(String _1, String _2, int x, float y, int c, Customer cs, Store s) {
+	public ScaledItem(String _1, String _2, int x, float y, int c, Customer cs, Store s) {
 		super(_1, _2, x, y);
 		if(c > x) {
 			countSaled = x;

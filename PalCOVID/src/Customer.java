@@ -69,7 +69,7 @@ public class Customer {
 		paymentMethod = a;
 	}
 	
-	public void buyItem(SaledItem a) {
+	public void buyItem(ScaledItem a) {
 		if(currentOrders.size() == 0) {
 			Order order = new Order();
 			order.items.add(a);
@@ -87,7 +87,7 @@ public class Customer {
 		
 	}
 	
-	public void removeItem(SaledItem a, Order r) {
+	public void removeItem(ScaledItem a, Order r) {
 		for(int i=0 ; i < currentOrders.size(); i++) {
 			if(r.equals(currentOrders.get(i))) {
 				for(int j=0; j< currentOrders.get(i).items.size(); j++) {

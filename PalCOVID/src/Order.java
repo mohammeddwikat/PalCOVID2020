@@ -2,7 +2,7 @@ import java.util.*;
 import java.time.*;
 
 public class Order {
-	public ArrayList <SaledItem> items ;
+	public ArrayList <ScaledItem> items ;
 	public String storeName;
 	public String addressDeliver;
 	public String timePlaced;
@@ -28,7 +28,7 @@ public class Order {
 			items.get(i).showDetails();
 		}
 	}
-	void removeItem(SaledItem a) {
+	void removeItem(ScaledItem a) {
 		for(int i=0 ; i < items.size(); i++) {
 			if(items.get(i).equals(a)) {
 				items.remove(i);
