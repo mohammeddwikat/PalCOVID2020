@@ -6,7 +6,6 @@ public class Store {
 	public String typeStore;
 	public ArrayList <Item> items;
 	private ArrayList <Order> orders;
-	public ArrayList <DeliveryCompany> delivareyCompanies;
 	
 	public Store(String _1,String _2,String _3 ) {
 		name = _1;
@@ -59,9 +58,7 @@ public class Store {
 			}
 		}
 	}
-	public void addDelivery(DeliveryCompany dc) {
-		delivareyCompanies.add(dc);
-	}
+	
 	public void showOrders() {
 		for(int i=0; i < orders.size(); i++) {
 			orders.get(i).showDetails();
