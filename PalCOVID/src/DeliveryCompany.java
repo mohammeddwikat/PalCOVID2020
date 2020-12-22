@@ -1,8 +1,10 @@
+import java.util.ArrayList;
 
 public class DeliveryCompany {
 	private String name;
 	private int phoneNumber;
 	private volatile static DeliveryCompany uniqueInstance;
+	private ArrayList <Driver> drivers;
 	
 	private DeliveryCompany(String _1, int x) {
 		this.name = _1;
@@ -31,5 +33,16 @@ public class DeliveryCompany {
 	}
 	public int getPhoneNumber() {
 		return phoneNumber;
+	}
+	public void addDriver(Driver d) {
+		drivers.add(d);
+	}
+	public void removeDriver(Driver d) {
+		for(int i=0; i<drivers.size(); i++) {
+			if(drivers.get(i).equals(d)) {
+				drivers.remove(i);
+				break;
+			}
+		}
 	}
 }

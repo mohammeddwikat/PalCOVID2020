@@ -1,11 +1,12 @@
 import java.util.*;
 public class Store {
 	
-	public	String name;
+	public String name;
 	public String email;
 	public String typeStore;
 	public ArrayList <Item> items;
 	private ArrayList <Order> orders;
+	private ArrayList <DeliveryRecord> records;
 	
 	public Store(String _1,String _2,String _3 ) {
 		name = _1;
@@ -65,10 +66,18 @@ public class Store {
 			orders.get(i).showItems();
 		}
 	}
-	//add + remove delivery company
-	public void createDeliveryRecord() {
-		
+	public void createDeliveryRecord (Customer c, String time, Driver d, Order o) {
+		DeliveryRecord deliveryRecord = new DeliveryRecord(d.getDriverName(), d.getPhoneNumber(), time, DeliveryCompany.getInstance("Careem", 597444141), c, o );
+		records.add(deliveryRecord);
 	}
 	
-	
 }
+/*
+ * driverName = _1;
+		phoneNumber = x;
+		timeOrderDeliverd = _2;
+		deCo = dc;
+		customer = cus;
+		order = o;
+  */
+ 
