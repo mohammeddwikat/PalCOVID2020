@@ -1,5 +1,5 @@
 
-public class SaledItem extends Item{
+public class SaledItem extends DrinkItem{
 	int countSaled;
 	Customer customer;
 	Store store;

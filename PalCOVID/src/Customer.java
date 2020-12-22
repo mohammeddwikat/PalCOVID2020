@@ -6,10 +6,10 @@ public class Customer {
 	private int phoneNumber;
 	private String password;
 	private String address;
-	private String paymentMethod;	
+	private PaymentSystem paymentMethod;	
 	private ArrayList <Order> currentOrders;
 	
-	public Customer(String _1, String _2, int pn, String _3, String _4, String _5){
+	public Customer(String _1, String _2, int pn, String _3, String _4, PaymentSystem _5){
 		name = _1;
 		email = _2;
 		phoneNumber = pn;
@@ -41,6 +41,9 @@ public class Customer {
 	public ArrayList <Order> getCurrentOrder() {
 		return currentOrders;
 	}
+	public PaymentSystem getPaymentMethod() {
+		return paymentMethod;
+	}
 	
 	public void setName(String n) {
 		name = n;
@@ -62,7 +65,7 @@ public class Customer {
 		address = a;
 	}
 	
-	public void setPaymentMethod(String a) {
+	public void setPaymentMethod(PaymentSystem a) {
 		paymentMethod = a;
 	}
 	
