@@ -72,12 +72,5 @@ public class Store {
 	}
 	
 }
-/*
- * driverName = _1;
-		phoneNumber = x;
-		timeOrderDeliverd = _2;
-		deCo = dc;
-		customer = cus;
-		order = o;
-  */
+
  
